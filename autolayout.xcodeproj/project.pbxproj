@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BD97A90256C4C2C00203D4F /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD97A8F256C4C2C00203D4F /* WeatherView.swift */; };
 		CA3836F525606D3C00CF10C1 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3836F425606D3C00CF10C1 /* MyViewController.swift */; };
 		CAE5BD58255C8045002F63A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE5BD57255C8045002F63A5 /* AppDelegate.swift */; };
 		CAE5BD5A255C8045002F63A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE5BD59255C8045002F63A5 /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BD97A8F256C4C2C00203D4F /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		CA3836F425606D3C00CF10C1 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		CAE5BD54255C8045002F63A5 /* autolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = autolayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE5BD57255C8045002F63A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BD97A8E256C4BF300203D4F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5BD97A8F256C4C2C00203D4F /* WeatherView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		CAE5BD4B255C8045002F63A5 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 		CAE5BD56255C8045002F63A5 /* autolayout */ = {
 			isa = PBXGroup;
 			children = (
+				5BD97A8E256C4BF300203D4F /* Components */,
 				CAE5BD57255C8045002F63A5 /* AppDelegate.swift */,
 				CAE5BD59255C8045002F63A5 /* SceneDelegate.swift */,
 				CAE5BD5B255C8045002F63A5 /* ViewController.swift */,
@@ -144,6 +155,7 @@
 				CAE5BD5C255C8045002F63A5 /* ViewController.swift in Sources */,
 				CAE5BD58255C8045002F63A5 /* AppDelegate.swift in Sources */,
 				CA3836F525606D3C00CF10C1 /* MyViewController.swift in Sources */,
+				5BD97A90256C4C2C00203D4F /* WeatherView.swift in Sources */,
 				CAE5BD5A255C8045002F63A5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,7 +232,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
