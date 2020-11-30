@@ -8,7 +8,23 @@
 
 import UIKit
 
-class MyViewController: UIViewController {
+let itemsArray = [("ПЯТНИЦА, 13 НОЯБ.", ""), ("[Andersen] Daily Meeting", "15:30"), ("[Andersen] Аудит", "16:00"), ("ВОСКРЕСЕНЬЕ, 15 НОЯБ.", ""), ("Turkish Grand Prix", "12:10"), ("ПОНЕДЕЛЬНИК, 16 НОЯБ.", ""), ("SA_Platform features (mob)_we...", "10:30"), ("ещё 1 событие", "")]
+
+class MyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itemsArray.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let item = itemsArray[indexPath.row]
+        cell.textLabel?.text = item.0
+        cell.detailTextLabel?.text = item.1
+
+        return cell
+    }
 
     // - 1ST LAYER
     private lazy var searchBar: UISearchBar = {
@@ -32,49 +48,69 @@ class MyViewController: UIViewController {
 
     // - 2ND LAYER
 
-    private lazy var backgroundView: UIScrollView = {
-        let view = UIScrollView()
+    private lazy var backgroundView: UIView = {
+        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
     // - 3RD LAYER
     let weatherView: WeatherView = WeatherView()
-//    weatherView.configure()
-//    private lazy var weatherView: UIView = {
-//        let weatherView = UIView()
-//        weatherView.layer.cornerRadius = 20
-//        weatherView.translatesAutoresizingMaskIntoConstraints = false
-//        weatherView.backgroundColor = .init(red: 0.401, green: 0.465, blue: 0.541, alpha: 1)
-//        return weatherView
-//    }()
 
-    private lazy var watchView: UIScrollView = {
-        let watchView = UIScrollView()
+    private lazy var watchView: UIView = {
+        let watchView = UIView()
         watchView.translatesAutoresizingMaskIntoConstraints = false
         watchView.backgroundColor = .init(red: 0.510, green: 0.549, blue: 0.576, alpha: 1)
         return watchView
     }()
 
-    private lazy var cellularWidgetView: UIScrollView = {
-        let view = UIScrollView()
+    private lazy var cellularWidgetView: UIView = {
+        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .init(red: 0.263, green: 0.791, blue: 0.373, alpha: 1)
         return view
     }()
 
-    private lazy var tableView: UIScrollView = {
+    private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
+        tableView.dataSource = self
         return tableView
+    }()
+
+    private lazy var currencyView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        return view
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+
         view.addSubviews(views:
             searchBar,
             scrollView
+        )
+
+        scrollView.addSubview(backgroundView)
+
+        backgroundView.addSubviews(
+            views:
+            weatherView,
+            watchView,
+            cellularWidgetView,
+            tableView,
+            currencyView
+        )
+
+        weatherView.configure(with:
+            .init(cornerRadius: 20,
+                  backgroundColor: .init(red: 0.401, green: 0.465, blue: 0.541, alpha: 1)
+            )
         )
 
         setupSearchView()
@@ -85,6 +121,7 @@ class MyViewController: UIViewController {
         setupWatchView()
         setupCellWidgetView()
         setupTableView()
+        setupCurrencyView()
     }
     
     func setupRootView() {
@@ -93,25 +130,21 @@ class MyViewController: UIViewController {
 
     func setupSearchView() {
         NSLayoutConstraint.activate([
-            searchBar.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 18),
-            searchBar.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -18),
-            searchBar.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 18),
+            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -18),
+            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             searchBar.heightAnchor.constraint(equalToConstant: 50)
         ])
-
-        weatherView.configure(with:
-            .init(cornerRadius: 20,
-                  backgroundColor: .init(red: 0.401, green: 0.465, blue: 0.541, alpha: 1)
-            )
-        )
     }
 
     func setupScrollView() {
         NSLayoutConstraint.activate([
-//            scrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-//            scrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-//            scrollView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
-//            scrollView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            scrollView.widthAnchor.constraint(equalTo: backgroundView.widthAnchor),
+            scrollView.heightAnchor.constraint(equalTo: backgroundView.heightAnchor)
         ])
     }
 
@@ -122,17 +155,9 @@ class MyViewController: UIViewController {
             backgroundView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             backgroundView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
         ])
-
-        backgroundView.addSubviews(
-            views:
-            weatherView,
-            watchView,
-            cellularWidgetView,
-            tableView
-        )
     }
 
-    func setupWeatherView() { // pin to backgroundView
+    func setupWeatherView() {
         NSLayoutConstraint.activate([
             weatherView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 18),
             weatherView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -18),
@@ -141,18 +166,16 @@ class MyViewController: UIViewController {
         ])
     }
 
-    func setupWatchView() {// pin to backgroundView
+    func setupWatchView() {
         NSLayoutConstraint.activate([
-            watchView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 18),//1
-            watchView.trailingAnchor.constraint(equalTo: cellularWidgetView.leadingAnchor, constant: -18),//3
-            watchView.topAnchor.constraint(equalTo: weatherView.bottomAnchor, constant: 18),//2
-//            watchView.bottomAnchor.constraint(equalTo: tableView.topAnchor, constant: -18),//7
-//            watchView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),//7
+            watchView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 18),
+            watchView.trailingAnchor.constraint(equalTo: cellularWidgetView.leadingAnchor, constant: -18),
+            watchView.topAnchor.constraint(equalTo: weatherView.bottomAnchor, constant: 18),
             watchView.widthAnchor.constraint(equalTo: watchView.heightAnchor)
         ])
     }
 
-    func setupCellWidgetView() {// pin to backgroundView
+    func setupCellWidgetView() {
         NSLayoutConstraint.activate([
             cellularWidgetView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -18),
             cellularWidgetView.topAnchor.constraint(equalTo: weatherView.bottomAnchor, constant: 18),
@@ -161,13 +184,22 @@ class MyViewController: UIViewController {
         ])
     }
 
-    func setupTableView() {// pin to backgroundView
+    func setupTableView() {
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 18),
             tableView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -18),
             tableView.topAnchor.constraint(equalTo: watchView.bottomAnchor, constant: 18),
-//            tableView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
-            tableView.heightAnchor.constraint(equalToConstant: 340)
+//            tableView.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor),
+        ])
+    }
+
+    func setupCurrencyView() {
+        NSLayoutConstraint.activate([
+            currencyView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 18),
+            currencyView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -18),
+            currencyView.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 18),
+//            currencyView.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor),
+            currencyView.heightAnchor.constraint(equalToConstant: 200)
         ])
     }
 
