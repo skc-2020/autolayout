@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5BD97A90256C4C2C00203D4F /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD97A8F256C4C2C00203D4F /* WeatherView.swift */; };
 		CA3836F525606D3C00CF10C1 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3836F425606D3C00CF10C1 /* MyViewController.swift */; };
+		CAAE406225743839005AB5F5 /* NewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAE406125743839005AB5F5 /* NewVC.swift */; };
+		CAC9105D25753B91004C65F2 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC9105C25753B91004C65F2 /* ActivityView.swift */; };
+		CAC9105F25755035004C65F2 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC9105E25755035004C65F2 /* SearchBar.swift */; };
 		CAE5BD58255C8045002F63A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE5BD57255C8045002F63A5 /* AppDelegate.swift */; };
 		CAE5BD5A255C8045002F63A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE5BD59255C8045002F63A5 /* SceneDelegate.swift */; };
 		CAE5BD5C255C8045002F63A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE5BD5B255C8045002F63A5 /* ViewController.swift */; };
@@ -20,6 +23,9 @@
 /* Begin PBXFileReference section */
 		5BD97A8F256C4C2C00203D4F /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		CA3836F425606D3C00CF10C1 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		CAAE406125743839005AB5F5 /* NewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewVC.swift; sourceTree = "<group>"; };
+		CAC9105C25753B91004C65F2 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		CAC9105E25755035004C65F2 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CAE5BD54255C8045002F63A5 /* autolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = autolayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE5BD57255C8045002F63A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAE5BD59255C8045002F63A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				5BD97A8F256C4C2C00203D4F /* WeatherView.swift */,
+				CAC9105E25755035004C65F2 /* SearchBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -74,6 +81,8 @@
 				CAE5BD5B255C8045002F63A5 /* ViewController.swift */,
 				CA3836F425606D3C00CF10C1 /* MyViewController.swift */,
 				CAE5BD5D255C8045002F63A5 /* Main.storyboard */,
+				CAAE406125743839005AB5F5 /* NewVC.swift */,
+				CAC9105C25753B91004C65F2 /* ActivityView.swift */,
 				CAE5BD60255C8049002F63A5 /* Assets.xcassets */,
 				CAE5BD62255C8049002F63A5 /* LaunchScreen.storyboard */,
 				CAE5BD65255C8049002F63A5 /* Info.plist */,
@@ -156,7 +165,10 @@
 				CAE5BD58255C8045002F63A5 /* AppDelegate.swift in Sources */,
 				CA3836F525606D3C00CF10C1 /* MyViewController.swift in Sources */,
 				5BD97A90256C4C2C00203D4F /* WeatherView.swift in Sources */,
+				CAC9105F25755035004C65F2 /* SearchBar.swift in Sources */,
+				CAC9105D25753B91004C65F2 /* ActivityView.swift in Sources */,
 				CAE5BD5A255C8045002F63A5 /* SceneDelegate.swift in Sources */,
+				CAAE406225743839005AB5F5 /* NewVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
