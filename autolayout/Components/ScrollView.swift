@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SearchBar: UIView {
+final class ScrollView: UIScrollView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,21 +24,17 @@ final class SearchBar: UIView {
 
 // MARK: - Configuration
 
-extension SearchBar {
+extension ScrollView {
 
     struct Model {
         let text: String
         let cornerRadius: CGFloat
         let backgroundColor: UIColor
-//        let searchBarStyle: UISearchBar.Style
-//        let textColor: UIColor
-//        let textFont: UIFont
     }
 
     func configure(with model: Model) {
         layer.cornerRadius = model.cornerRadius
         backgroundColor = model.backgroundColor
-//        searchBarStyle = model.searchBarStyle
-//        UISearchTextField().font = model.textFont
     }
 }
+

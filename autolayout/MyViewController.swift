@@ -20,6 +20,9 @@ let itemsArray = [
 
 class MyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    let searchBar = SearchBar()
+    let weatherView: WeatherView = WeatherView()
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemsArray.count
     }
@@ -33,25 +36,25 @@ class MyViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     // - 1ST LAYER
-    private lazy var searchBar: UISearchBar = {
-        let searchBar = UISearchBar()
-        searchBar.text = "Поиск"
-        searchBar.searchTextField.textColor = .gray
-        searchBar.searchBarStyle = .minimal
-        searchBar.backgroundColor = .init(red: 0.278, green: 0.278, blue: 0.286, alpha: 1)
-//        searchBar.setPositionAdjustment(.init(horizontal: 140, vertical: 0), for: .search)
-        searchBar.layer.cornerRadius = 15
-        searchBar.searchTextField.font = .systemFont(ofSize: 19)
-        searchBar.translatesAutoresizingMaskIntoConstraints = false
-        return searchBar
-    }()
+//    private lazy var searchBar: UISearchBar = {
+//        let searchBar = UISearchBar()
+//        searchBar.text = "Поиск"
+//        searchBar.layer.cornerRadius = 15
+//        searchBar.searchTextField.textColor = .gray
+//        searchBar.searchBarStyle = .minimal
+//        searchBar.backgroundColor = .init(red: 0.278, green: 0.278, blue: 0.286, alpha: 1)
+////        searchBar.setPositionAdjustment(.init(horizontal: 140, vertical: 0), for: .search)
+//        searchBar.searchTextField.font = .systemFont(ofSize: 19)
+//        searchBar.translatesAutoresizingMaskIntoConstraints = false
+//        return searchBar
+//    }()
     
     private lazy var scrollView: UIScrollView = {
         let view = UIScrollView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
+
     // - 2ND LAYER
     private lazy var backgroundView: UIView = {
         let view = UIView()
@@ -59,7 +62,6 @@ class MyViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         return view
     }()
     // - 3RD LAYER
-    let weatherView: WeatherView = WeatherView()
     private lazy var watchView: UIView = {
         let watchView = UIView()
         watchView.translatesAutoresizingMaskIntoConstraints = false
@@ -88,22 +90,32 @@ class MyViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        view.addSubviews(views:
-            searchBar,
-                         scrollView
-        )
+        view.addSubviews(views: searchBar,scrollView)
         scrollView.addSubview(backgroundView)
-        backgroundView.addSubviews(
-            views:
-            weatherView,
-            watchView,
-            cellularWidgetView,
-            tableView,
-            currencyView
+        backgroundView.addSubviews(views:
+                                   weatherView,
+                                   watchView,
+                                   cellularWidgetView,
+                                   tableView,
+                                   currencyView
         )
         weatherView.configure(with:
             .init(cornerRadius: 20,
-                  backgroundColor: .init(red: 0.401, green: 0.465, blue: 0.541, alpha: 1)
+                  backgroundColor:
+                .init(red: 0.401,
+                      green: 0.465,
+                      blue: 0.541,
+                      alpha: 1)))
+        searchBar.configure(
+            with: .init(text: "Поиск",
+                        cornerRadius: 15,
+                        backgroundColor: .init(red: 0.278,
+                                               green: 0.278,
+                                               blue: 0.286,
+                                               alpha: 1)
+//                        searchBarStyle: .minimal,
+//                        textColor: .gray,
+//                        textFont: .systemFont(ofSize: 19)
             )
         )
         setupSearchView()
