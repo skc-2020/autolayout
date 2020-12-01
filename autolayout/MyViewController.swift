@@ -7,11 +7,23 @@
 //
 
 import UIKit
-let itemsArray = [("ПЯТНИЦА, 13 НОЯБ.", ""), ("[Andersen] Daily Meeting", "15:30"), ("[Andersen] Аудит", "16:00"), ("ВОСКРЕСЕНЬЕ, 15 НОЯБ.", ""), ("Turkish Grand Prix", "12:10"), ("ПОНЕДЕЛЬНИК, 16 НОЯБ.", ""), ("SA_Platform features (mob)_we...", "10:30"), ("ещё 1 событие", "")]
+let itemsArray = [
+    ("ПЯТНИЦА, 13 НОЯБ.", ""),
+    ("[Andersen] Daily Meeting", "15:30"),
+    ("[Andersen] Аудит", "16:00"),
+    ("ВОСКРЕСЕНЬЕ, 15 НОЯБ.", ""),
+    ("Turkish Grand Prix", "12:10"),
+    ("ПОНЕДЕЛЬНИК, 16 НОЯБ.", ""),
+    ("SA_Platform features (mob)_we...", "10:30"),
+    ("ещё 1 событие", "")
+]
+
 class MyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemsArray.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let item = itemsArray[indexPath.row]
@@ -19,6 +31,7 @@ class MyViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         cell.detailTextLabel?.text = item.1
         return cell
     }
+    
     // - 1ST LAYER
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
@@ -26,17 +39,19 @@ class MyViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         searchBar.searchTextField.textColor = .gray
         searchBar.searchBarStyle = .minimal
         searchBar.backgroundColor = .init(red: 0.278, green: 0.278, blue: 0.286, alpha: 1)
-        searchBar.setPositionAdjustment(.init(horizontal: 140, vertical: 0), for: .search)
+//        searchBar.setPositionAdjustment(.init(horizontal: 140, vertical: 0), for: .search)
         searchBar.layer.cornerRadius = 15
         searchBar.searchTextField.font = .systemFont(ofSize: 19)
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         return searchBar
     }()
+    
     private lazy var scrollView: UIScrollView = {
         let view = UIScrollView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
     // - 2ND LAYER
     private lazy var backgroundView: UIView = {
         let view = UIView()

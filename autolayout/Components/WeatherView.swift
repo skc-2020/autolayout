@@ -20,8 +20,6 @@ final class WeatherView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-        //        weatherView.layer.cornerRadius = 20
-        //        weatherView.backgroundColor = .init(red: 0.401, green: 0.465, blue: 0.541, alpha: 1)
 }
 
 // MARK: - Configuration
@@ -37,5 +35,4 @@ extension WeatherView {
         layer.cornerRadius = model.cornerRadius
         backgroundColor = model.backgroundColor
     }
-
 }
