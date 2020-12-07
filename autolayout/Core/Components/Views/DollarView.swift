@@ -1,14 +1,14 @@
 //
-//  SearchView.swift
+//  DollarView.swift
 //  autolayout
 //
-//  Created by AndUser on 30.11.2020.
+//  Created by AndUser on 03.12.2020.
 //  Copyright © 2020 AndUser. All rights reserved.
 //
 
 import UIKit
 
-final class ScrollView: UIScrollView {
+class DollarView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,21 +20,21 @@ final class ScrollView: UIScrollView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
 }
 
 // MARK: - Configuration
 
-extension ScrollView {
+extension DollarView {
 
     struct Model {
-        let text: String
-        let cornerRadius: CGFloat
         let backgroundColor: UIColor
+        let value: UILabel
+        let iconView: UIView
     }
 
     func configure(with model: Model) {
-        layer.cornerRadius = model.cornerRadius
         backgroundColor = model.backgroundColor
+//        text = model.value
     }
 }
-
