@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5BD97A90256C4C2C00203D4F /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD97A8F256C4C2C00203D4F /* WeatherView.swift */; };
+		5BD97A90256C4C2C00203D4F /* WeatherWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD97A8F256C4C2C00203D4F /* WeatherWidgetView.swift */; };
 		5BDBAB632576EE6A00BA171D /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBAB622576EE6A00BA171D /* ScrollView.swift */; };
 		CA3836F525606D3C00CF10C1 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3836F425606D3C00CF10C1 /* MyViewController.swift */; };
+		CA535DE925783ABA006CC132 /* ContainerVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA535DE825783ABA006CC132 /* ContainerVeiw.swift */; };
+		CA535DEB25783BFE006CC132 /* WatchWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA535DEA25783BFE006CC132 /* WatchWidgetView.swift */; };
+		CA535DED25783D3C006CC132 /* CellularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA535DEC25783D3C006CC132 /* CellularWidgetView.swift */; };
+		CA535DEF25783E87006CC132 /* SchedulerWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA535DEE25783E87006CC132 /* SchedulerWidgetView.swift */; };
+		CA535DF1257842E2006CC132 /* CurrencyWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA535DF0257842E2006CC132 /* CurrencyWidgetView.swift */; };
+		CA535DF825798036006CC132 /* DollarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA535DF725798036006CC132 /* DollarView.swift */; };
+		CA535DFA257A8E66006CC132 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA535DF9257A8E66006CC132 /* TestVC.swift */; };
+		CA5E598E2586A8B200A0D9D3 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5E598D2586A8B200A0D9D3 /* UIViewExtensions.swift */; };
+		CA5E59902587A4B500A0D9D3 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5E598F2587A4B500A0D9D3 /* RootView.swift */; };
+		CAB00340257B896F00661B0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB0033F257B896F00661B0F /* Constants.swift */; };
 		CAC9105F25755035004C65F2 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC9105E25755035004C65F2 /* SearchBar.swift */; };
 		CAE5BD58255C8045002F63A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE5BD57255C8045002F63A5 /* AppDelegate.swift */; };
 		CAE5BD5A255C8045002F63A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE5BD59255C8045002F63A5 /* SceneDelegate.swift */; };
@@ -17,12 +27,28 @@
 		CAE5BD5F255C8045002F63A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE5BD5D255C8045002F63A5 /* Main.storyboard */; };
 		CAE5BD61255C8049002F63A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAE5BD60255C8049002F63A5 /* Assets.xcassets */; };
 		CAE5BD64255C8049002F63A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE5BD62255C8049002F63A5 /* LaunchScreen.storyboard */; };
+		CAF14C85257EBD7400222344 /* InnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF14C84257EBD7400222344 /* InnerView.swift */; };
+		CAF14C87257EC3C800222344 /* CurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF14C86257EC3C800222344 /* CurrencyView.swift */; };
+		CAF14C8A257ED58900222344 /* WidgetStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF14C89257ED58900222344 /* WidgetStackView.swift */; };
+		CAF14C8C257EDD0600222344 /* CurrencyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF14C8B257EDD0600222344 /* CurrencyLabel.swift */; };
+		CAF14C8E2580163200222344 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF14C8D2580163200222344 /* WidgetView.swift */; };
+		CAF14C902580237500222344 /* SchedulerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF14C8F2580237500222344 /* SchedulerTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5BD97A8F256C4C2C00203D4F /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		5BD97A8F256C4C2C00203D4F /* WeatherWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWidgetView.swift; sourceTree = "<group>"; };
 		5BDBAB622576EE6A00BA171D /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 		CA3836F425606D3C00CF10C1 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		CA535DE825783ABA006CC132 /* ContainerVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVeiw.swift; sourceTree = "<group>"; };
+		CA535DEA25783BFE006CC132 /* WatchWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchWidgetView.swift; sourceTree = "<group>"; };
+		CA535DEC25783D3C006CC132 /* CellularWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellularWidgetView.swift; sourceTree = "<group>"; };
+		CA535DEE25783E87006CC132 /* SchedulerWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerWidgetView.swift; sourceTree = "<group>"; };
+		CA535DF0257842E2006CC132 /* CurrencyWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyWidgetView.swift; sourceTree = "<group>"; };
+		CA535DF725798036006CC132 /* DollarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarView.swift; sourceTree = "<group>"; };
+		CA535DF9257A8E66006CC132 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		CA5E598D2586A8B200A0D9D3 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		CA5E598F2587A4B500A0D9D3 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		CAB0033F257B896F00661B0F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CAC9105E25755035004C65F2 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CAE5BD54255C8045002F63A5 /* autolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = autolayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE5BD57255C8045002F63A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +58,12 @@
 		CAE5BD60255C8049002F63A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAE5BD63255C8049002F63A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAE5BD65255C8049002F63A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAF14C84257EBD7400222344 /* InnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerView.swift; sourceTree = "<group>"; };
+		CAF14C86257EC3C800222344 /* CurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyView.swift; sourceTree = "<group>"; };
+		CAF14C89257ED58900222344 /* WidgetStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetStackView.swift; sourceTree = "<group>"; };
+		CAF14C8B257EDD0600222344 /* CurrencyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyLabel.swift; sourceTree = "<group>"; };
+		CAF14C8D2580163200222344 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
+		CAF14C8F2580237500222344 /* SchedulerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,11 +80,52 @@
 		5BD97A8E256C4BF300203D4F /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				5BD97A8F256C4C2C00203D4F /* WeatherView.swift */,
-				CAC9105E25755035004C65F2 /* SearchBar.swift */,
-				5BDBAB622576EE6A00BA171D /* ScrollView.swift */,
+				CA535DFE257AD0B3006CC132 /* Labels */,
+				CA535DFD257AD09C006CC132 /* Views */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		CA535DF225784473006CC132 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CAB0033F257B896F00661B0F /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		CA535DFD257AD09C006CC132 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CAF14C88257ED2FD00222344 /* WidgetViews */,
+				CAF14C84257EBD7400222344 /* InnerView.swift */,
+				CAC9105E25755035004C65F2 /* SearchBar.swift */,
+				5BDBAB622576EE6A00BA171D /* ScrollView.swift */,
+				CA5E598F2587A4B500A0D9D3 /* RootView.swift */,
+				CAF14C8F2580237500222344 /* SchedulerTableView.swift */,
+				CA5E598D2586A8B200A0D9D3 /* UIViewExtensions.swift */,
+				CA535DE825783ABA006CC132 /* ContainerVeiw.swift */,
+				CA535DF725798036006CC132 /* DollarView.swift */,
+				CAF14C86257EC3C800222344 /* CurrencyView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CA535DFE257AD0B3006CC132 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				CAF14C8B257EDD0600222344 /* CurrencyLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		CA535E01257ADCE7006CC132 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CA535DF225784473006CC132 /* Constants */,
+				5BD97A8E256C4BF300203D4F /* Components */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		CAE5BD4B255C8045002F63A5 = {
@@ -74,17 +147,32 @@
 		CAE5BD56255C8045002F63A5 /* autolayout */ = {
 			isa = PBXGroup;
 			children = (
-				5BD97A8E256C4BF300203D4F /* Components */,
 				CAE5BD57255C8045002F63A5 /* AppDelegate.swift */,
 				CAE5BD59255C8045002F63A5 /* SceneDelegate.swift */,
+				CA535E01257ADCE7006CC132 /* Core */,
 				CAE5BD5B255C8045002F63A5 /* ViewController.swift */,
 				CA3836F425606D3C00CF10C1 /* MyViewController.swift */,
+				CA535DF9257A8E66006CC132 /* TestVC.swift */,
 				CAE5BD5D255C8045002F63A5 /* Main.storyboard */,
 				CAE5BD60255C8049002F63A5 /* Assets.xcassets */,
 				CAE5BD62255C8049002F63A5 /* LaunchScreen.storyboard */,
 				CAE5BD65255C8049002F63A5 /* Info.plist */,
 			);
 			path = autolayout;
+			sourceTree = "<group>";
+		};
+		CAF14C88257ED2FD00222344 /* WidgetViews */ = {
+			isa = PBXGroup;
+			children = (
+				5BD97A8F256C4C2C00203D4F /* WeatherWidgetView.swift */,
+				CAF14C8D2580163200222344 /* WidgetView.swift */,
+				CAF14C89257ED58900222344 /* WidgetStackView.swift */,
+				CA535DEC25783D3C006CC132 /* CellularWidgetView.swift */,
+				CA535DF0257842E2006CC132 /* CurrencyWidgetView.swift */,
+				CA535DEE25783E87006CC132 /* SchedulerWidgetView.swift */,
+				CA535DEA25783BFE006CC132 /* WatchWidgetView.swift */,
+			);
+			path = WidgetViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,13 +246,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA5E598E2586A8B200A0D9D3 /* UIViewExtensions.swift in Sources */,
+				CA5E59902587A4B500A0D9D3 /* RootView.swift in Sources */,
+				CAB00340257B896F00661B0F /* Constants.swift in Sources */,
 				CAE5BD5C255C8045002F63A5 /* ViewController.swift in Sources */,
 				5BDBAB632576EE6A00BA171D /* ScrollView.swift in Sources */,
+				CA535DEB25783BFE006CC132 /* WatchWidgetView.swift in Sources */,
+				CAF14C87257EC3C800222344 /* CurrencyView.swift in Sources */,
 				CAE5BD58255C8045002F63A5 /* AppDelegate.swift in Sources */,
 				CA3836F525606D3C00CF10C1 /* MyViewController.swift in Sources */,
-				5BD97A90256C4C2C00203D4F /* WeatherView.swift in Sources */,
+				CA535DE925783ABA006CC132 /* ContainerVeiw.swift in Sources */,
+				CA535DFA257A8E66006CC132 /* TestVC.swift in Sources */,
+				CA535DEF25783E87006CC132 /* SchedulerWidgetView.swift in Sources */,
+				CA535DF1257842E2006CC132 /* CurrencyWidgetView.swift in Sources */,
+				5BD97A90256C4C2C00203D4F /* WeatherWidgetView.swift in Sources */,
+				CAF14C8A257ED58900222344 /* WidgetStackView.swift in Sources */,
 				CAC9105F25755035004C65F2 /* SearchBar.swift in Sources */,
+				CAF14C8E2580163200222344 /* WidgetView.swift in Sources */,
+				CA535DED25783D3C006CC132 /* CellularWidgetView.swift in Sources */,
+				CAF14C85257EBD7400222344 /* InnerView.swift in Sources */,
+				CAF14C8C257EDD0600222344 /* CurrencyLabel.swift in Sources */,
+				CA535DF825798036006CC132 /* DollarView.swift in Sources */,
 				CAE5BD5A255C8045002F63A5 /* SceneDelegate.swift in Sources */,
+				CAF14C902580237500222344 /* SchedulerTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

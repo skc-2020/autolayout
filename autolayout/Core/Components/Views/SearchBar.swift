@@ -8,18 +8,19 @@
 
 import UIKit
 
-final class SearchBar: UIView {
+final class SearchBar: UISearchBar {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-
+        
         translatesAutoresizingMaskIntoConstraints = false
     }
-
+    
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
 }
 
 // MARK: - Configuration
@@ -30,15 +31,17 @@ extension SearchBar {
         let text: String
         let cornerRadius: CGFloat
         let backgroundColor: UIColor
-//        let searchBarStyle: UISearchBar.Style
-//        let textColor: UIColor
-//        let textFont: UIFont
+        let searchBarStyle: UISearchBar.Style
+        let textColor: UIColor
+        let textFont: UIFont
     }
 
     func configure(with model: Model) {
+        text = model.text
         layer.cornerRadius = model.cornerRadius
         backgroundColor = model.backgroundColor
-//        searchBarStyle = model.searchBarStyle
-//        UISearchTextField().font = model.textFont
+        searchBarStyle = model.searchBarStyle
+        searchTextField.textColor = model.textColor
+        searchTextField.font = model.textFont
     }
 }

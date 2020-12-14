@@ -1,14 +1,14 @@
 //
-//  ViewComponent.swift
+//  CurrencyView.swift
 //  autolayout
 //
-//  Created by SKC on 23.11.2020.
+//  Created by AndUser on 07.12.2020.
 //  Copyright © 2020 AndUser. All rights reserved.
 //
 
 import UIKit
 
-final class WeatherView: UIView {
+final class CurrencyView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,11 +20,12 @@ final class WeatherView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
 }
 
 // MARK: - Configuration
 
-extension WeatherView {
+extension CurrencyView {
 
     struct Model {
         let cornerRadius: CGFloat
@@ -32,7 +33,7 @@ extension WeatherView {
     }
 
     func configure(with model: Model) {
-        layer.cornerRadius = model.cornerRadius
         backgroundColor = model.backgroundColor
+        layer.cornerRadius = model.cornerRadius
     }
 }

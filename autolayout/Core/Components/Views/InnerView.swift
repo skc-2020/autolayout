@@ -1,14 +1,14 @@
 //
-//  SearchView.swift
+//  InnerView.swift
 //  autolayout
 //
-//  Created by AndUser on 30.11.2020.
+//  Created by AndUser on 07.12.2020.
 //  Copyright © 2020 AndUser. All rights reserved.
 //
 
 import UIKit
 
-final class ScrollView: UIScrollView {
+final class InnerView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,14 +20,14 @@ final class ScrollView: UIScrollView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
 }
 
 // MARK: - Configuration
 
-extension ScrollView {
+extension InnerView {
 
     struct Model {
-        let text: String
         let cornerRadius: CGFloat
         let backgroundColor: UIColor
     }
@@ -37,4 +37,3 @@ extension ScrollView {
         backgroundColor = model.backgroundColor
     }
 }
-
