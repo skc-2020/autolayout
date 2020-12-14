@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CurrencyLabel: UILabel {
+final class CurrencyLabel: UILabel {
 
     override init(frame: CGRect) {
         super.init(frame: frame)

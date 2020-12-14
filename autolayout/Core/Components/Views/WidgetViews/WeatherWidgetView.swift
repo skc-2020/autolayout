@@ -8,18 +8,12 @@
 
 import UIKit
 
-final class WeatherWidgetView: UIView {
+final class WeatherWidgetView: WidgetView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-
-        translatesAutoresizingMaskIntoConstraints = false
     }
 
-    @available(*, unavailable)
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }
 
 // MARK: - Configuration
@@ -27,12 +21,10 @@ final class WeatherWidgetView: UIView {
 extension WeatherWidgetView {
 
     struct Model {
-        let cornerRadius: CGFloat
         let backgroundColor: UIColor
     }
 
     func configure(with model: Model) {
-        layer.cornerRadius = model.cornerRadius
         backgroundColor = model.backgroundColor
     }
 }

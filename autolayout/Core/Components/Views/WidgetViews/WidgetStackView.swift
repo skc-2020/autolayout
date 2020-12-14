@@ -20,7 +20,6 @@ final class WidgetStackView: UIStackView {
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }
 
 // MARK: - Configuration
@@ -40,8 +39,9 @@ extension WidgetStackView {
     }
     
     func addItemsToStackView(views: UIView...) {
-        for i in 0...views.count-1 {
-            self.addArrangedSubview(views[i])
-        }
+//        for i in 0...views.count-1 {
+//            self.addArrangedSubview(views[i])
+//        }
+        views.forEach { self.addArrangedSubview($0) }
     }
 }
